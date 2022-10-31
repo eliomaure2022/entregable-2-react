@@ -117,10 +117,10 @@ function App() {
           <img  src={` http://openweathermap.org/img/wn/${weather.weather?.[0].icon}@2x.png`} alt="" />
           <p style={{fontSize: '30px'}}>
             {isCelcius ? Math.floor((weather.main?.temp) - 273.15) : Math.floor(((weather.main?.temp) - 273.15) * 9 / 5 + 32)} °{' '}
-            {isCelcius ? 'celcius' : 'farenheit'};
+            {isCelcius ? 'celcius' : 'farenheit'}
           </p>
         </div>
-        <div>
+        <div className='items'>
           <h3>"scattered clouds"</h3>
           <p><i className="fa-solid fa-wind"></i>  Wind speed: {weather.wind?.speed} km/h</p>
           <p><i className="fa-solid fa-cloud"></i>  Clouds: {weather.clouds?.all} %</p>
